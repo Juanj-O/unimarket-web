@@ -43,7 +43,7 @@ pnpm dev
 
 # Contributors 🙋‍♂️🙋‍♀️
 
-People who participated in the project ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+People who participated in the project:
 
 <!-- markdownlint-disable -->
 <table>
@@ -51,6 +51,6 @@ People who participated in the project ([emoji key](https://allcontributors.org/
     <td align="center"><a href="https://github.com/julianaarias12"><img src="https://avatars.githubusercontent.com/u/101146385?v=4" width="100px;"alt=""/><br /><sub><b>Juliana Arias</b></sub></a><br /><a href=""title="Code">💅💆‍♀️💻</a></td>
     <td align="center"><a href="https://github.com/EstebanUran"><img src="https://avatars.githubusercontent.com/u/37149028?v=4" width="100px;"alt=""/><br /><sub><b>Juan Esteban Uran</b></sub></a><br /><a href=""title="Code">💻⚽🎾</a></td>
     <td align="center"><a href="https://github.com/YefersonZuluaga"><img src="https://avatars.githubusercontent.com/u/94468065?v=4" width="100px;"alt=""/><br /><sub><b>Yeferson Zuluaga</b></sub></a><br /><a href=""title="Code">📱💻👨‍💻</a></td>
-    <td align="center"><a href="https://github.com/Juanj-O"><img src="https://github.com/account" width="100px;"alt=""/><br /><sub><b>Juan José Osorio</b></sub></a><br /><a href=""title="Code">💻🏅🎮</a></td>
+    <td align="center"><a href="https://github.com/Juanj-O"><img src="https://avatars.githubusercontent.com/u/94468080?v=4" width="100px;"alt=""/><br /><sub><b>Juan José Osorio</b></sub></a><br /><a href=""title="Code">💻🏅🎮</a></td>
   </tr>
 </table>
