@@ -1,0 +1,263 @@
+@import './mixin_components';
+
+.ant-input,
+.ant-input-number {
+  border-radius: var(--border-radius-m);
+  font-size: 13px;
+  caret-color: var(--color-primary-light);
+  &:hover {
+    border-color: var(--color-primary-light);
+  }
+  &:focus,
+  &-focused {
+    box-shadow: 0 0 0 2px rgba(62, 232, 93, 0.33);
+    border: 1px solid var(--color-primary-light);
+    &:hover {
+      border-color: var(--color-primary-light);
+    }
+  }
+  & .ant-input {
+    font-size: 13px;
+    caret-color: var(--color-primary-light);
+  }
+}
+
+.ant-select-selection-placeholder {
+  font-size: 13px;
+}
+
+.ant-popover-inner {
+  border-radius: 10px;
+}
+
+.ant-checkbox-wrapper {
+  & .ant-checkbox-checked .ant-checkbox-inner {
+    border-color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
+  }
+
+  & .ant-checkbox-input:hover + .ant-checkbox-inner {
+    border-color: var(--color-primary-light);
+  }
+  & .ant-checkbox-input:focus + .ant-checkbox-inner {
+    border-color: var(--color-primary-light);
+  }
+  & .ant-checkbox-checked::after {
+    border-color: transparent;
+  }
+  & .ant-checkbox + span {
+    padding-right: 8px;
+    padding-left: 8px;
+    color: var(--color-primary-dark);
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.ant-select {
+  &-selector {
+    border-radius: var(--border-radius-m);
+    height: 31px;
+    &-item {
+      font-size: 12px;
+    }
+  }
+  &:not(.ant-select-disabled):hover .ant-select-selector {
+    border-color: var(--color-primary-light);
+  }
+  &-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border-color: var(--color-primary-light);
+    box-shadow: 0 0 0 2px rgba(62, 232, 93, 0.33);
+  }
+  &:not(.ant-select-customize-input) .ant-select-selector {
+    border-radius: var(--border-radius-m);
+  }
+  &-selection-item {
+    font-size: 13px;
+  }
+  &-arrow {
+    & .anticon {
+      & svg {
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+      }
+    }
+  }
+  &-open {
+    & .ant-select-arrow {
+      & .anticon {
+        & svg {
+          fill: var(--color-primary-light);
+        }
+      }
+    }
+  }
+}
+
+.ant-picker {
+  width: 100%;
+  border-radius: var(--border-radius-m);
+  font-size: 13px;
+  @include hoverAndFocus();
+  &-status-error {
+    @include hoverAndFocusError();
+    & .ant-picker-input > input {
+      caret-color: #c62626 !important;
+    }
+    & .ant-picker-suffix {
+      & .icon,
+      & .icon path {
+        @include icon(#c62626 !important, 15px);
+      }
+    }
+    &.ant-picker-focused {
+      box-shadow: 0 0 0 2px rgba(254, 78, 8, 0.19);
+      border: 1px solid #c62626;
+      &:hover {
+        border-color: #c62626;
+      }
+    }
+  }
+  & .ant-picker-input > input {
+    caret-color: var(--color-primary-light);
+    font-size: 13px;
+  }
+  & .ant-picker-suffix {
+    & .icon,
+    & .icon path {
+      @include icon(rgba(0, 0, 0, 0.25), 15px);
+    }
+  }
+}
+
+.ant-col.ant-form-item-label {
+  & .ant-form-item-required {
+    font-weight: 500;
+    color: var(--color-primary-dark);
+    &::before {
+      color: #c62626 !important;
+    }
+  }
+}
+
+.ant-form-item-label {
+  & label {
+    font-weight: 500;
+    color: var(--color-primary-dark);
+  }
+}
+
+.ant-select-item {
+  font-size: 12px !important;
+}
+
+.ant-select-item-option-content {
+  white-space: pre-wrap !important;
+}
+
+.ant-picker-panel-container {
+  border-radius: var(--border-radius-m);
+  -webkit-border-radius: var(--border-radius-m);
+  -moz-border-radius: var(--border-radius-m);
+  -ms-border-radius: var(--border-radius-m);
+  -o-border-radius: var(--border-radius-m);
+  & .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+    background-color: var(--color-primary-light);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    &::before {
+      border: none;
+    }
+  }
+  & .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+  &
+    .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+    .ant-picker-cell-inner {
+    background-color: #2eab2e25;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+  & .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+    border: 1px solid var(--color-primary-light);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+  & .ant-picker-today-btn {
+    color: var(--color-primary-light);
+    font-weight: 500;
+  }
+  & .ant-picker-header-view button {
+    font-weight: 500;
+    &:hover {
+      color: var(--color-primary-light);
+    }
+  }
+}
+
+.ant-form-item-explain.ant-form-item-explain-connected {
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  align-items: center;
+  min-height: 10px;
+  & .ant-form-item-explain-error {
+    color: #c62626;
+  }
+}
+
+[ant-click-animating-without-extra-node='true']::after,
+.ant-click-animating-node {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 var(--color-primary-light);
+  opacity: 0.3;
+  -webkit-animation: fadeEffectNutresa 1.5s cubic-bezier(0.08, 0.82, 0.17, 1),
+    waveEffectNutresa 0.5s cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation: fadeEffectNutresa 1.5s cubic-bezier(0.08, 0.82, 0.17, 1),
+    waveEffectNutresa 0.5s cubic-bezier(0.08, 0.82, 0.17, 1);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  content: '';
+  pointer-events: none;
+}
+
+@-webkit-keyframes waveEffectNutresa {
+  100% {
+    box-shadow: 0 0 0 var(--color-primary-light);
+    box-shadow: 0 0 0 5px var(--color-primary-light);
+  }
+}
+@keyframes waveEffectNutresa {
+  100% {
+    box-shadow: 0 0 0 var(--color-primary-light);
+    box-shadow: 0 0 0 5px var(--color-primary-light);
+  }
+}
+@-webkit-keyframes fadeEffectNutresa {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeEffectNutresa {
+  100% {
+    opacity: 0;
+  }
+}
