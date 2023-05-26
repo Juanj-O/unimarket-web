@@ -1,0 +1,29 @@
+@import "../../../scss/configs/mixin_components";
+
+.dashboardPage {
+  @include contentPage();
+  & .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.dashboard {
+  height: 100%;
+  width: 100%;
+
+  & .container-products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+
+  .loading {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
