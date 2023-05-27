@@ -1,4 +1,4 @@
-@import "../../../scss/configs/mixin_components";
+@import '../../../scss/configs/mixin_components';
 
 .dashboardPage {
   @include contentPage();
@@ -16,7 +16,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 45px;
+    gap: 30px;
+    justify-content: space-around;
   }
 
   .loading {

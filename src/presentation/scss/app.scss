@@ -14,6 +14,18 @@
   --color-primary-dark: #1e3663;
   --color-paragraph: #fff;
   --color-cancel: #b4b2b3;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #bdb5b4;
+    // border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #716e6e;
+    border-radius: 10px;
+  }
 }
 
 $font-type: 'Poppins', sans-serif;

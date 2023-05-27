@@ -20,6 +20,9 @@ const DashboardPage = () => {
           <CardProduct />
           <CardProduct />
           <CardProduct />
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
         </div>
       </div>
     </Layout>
