@@ -1,13 +1,13 @@
-@import "../../../scss/configs/mixin_components";
-@import "./header";
+@import '../../../scss/configs/mixin_components';
+@import './header';
 
 .layoutPages {
   display: flex;
-  height: 100vh;
+  // height: 100vh;
   width: 100%;
   transition: 5s;
 
-  background-color: var(--background-page-primary);
+  // background-color: var(--background-page-primary);
   & .navigation-drawer {
     display: flex;
     width: 380px;
@@ -149,7 +149,7 @@
   }
   & .contentPage {
     @include contentPage();
-    height: 100vh;
+    // height: 100vh;
     width: 100%;
     overflow-y: hidden;
     // padding: 25px;
@@ -166,7 +166,8 @@
     }
     main {
       width: 100%;
-      height: 100vh;
+      // height: 100vh;
+      height: auto;
       // max-width: 1200px;
       margin-left: auto;
       margin-right: auto;

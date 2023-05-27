@@ -1,11 +1,11 @@
-import React from "react";
-import Layout from "../../components/layout/Layout";
-import "./scss/_dashboard.scss";
-import CardProduct from "./components/card-product/CardProduct";
+import React from 'react'
+import Layout from '../../components/layout/Layout'
+import CardProduct from './components/card-product/CardProduct'
+import './scss/_dashboard.scss'
 
 const DashboardPage = () => {
   return (
-    <Layout classStyle={"dashboardPage"}>
+    <Layout classStyle={'dashboardPage'}>
       <div className="dashboard">
         <div className="container-products">
           <CardProduct />
@@ -23,7 +23,7 @@ const DashboardPage = () => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default DashboardPage;
+export default DashboardPage

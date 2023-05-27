@@ -1,21 +1,17 @@
-import React from "react";
+import React from 'react'
 // Style
-import "../../scss/_header.scss";
-import { useNavigate } from "react-router-dom";
-import Search from "./components/search/Search";
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { HeartOutlined, ShoppingCartOutlined } from '@ant-design/icons'
+import { useNavigate } from 'react-router-dom'
+import '../../scss/_header.scss'
+import Search from './components/search/Search'
 
 const Header = () => {
-  const navigate = useNavigate();
-  const submit = () => {
-    navigate("/market");
-  };
-  const handleLogin = () => {
-    navigate("/login");
-  };
-  const handleRegister = () => {
-    navigate("/login");
-  };
+  const navigate = useNavigate()
+
+  const redirect = (path) => {
+    navigate(path)
+  }
+
   return (
     <div className="header-menu">
       <div className="header-menu__left">
@@ -23,7 +19,7 @@ const Header = () => {
         <img
           src="assets/unimarket-logo.png"
           alt="unimarket-home"
-          onClick={submit}
+          onClick={() => redirect('/market')}
         />
       </div>
 
@@ -33,16 +29,16 @@ const Header = () => {
 
       <div className="header-menu__right">
         <HeartOutlined />
-        <div className="options" onClick={handleRegister}>
+        <div className="options" onClick={() => redirect('/login')}>
           Registrarse
         </div>
-        <div className="options" onClick={handleLogin}>
+        <div className="options" onClick={() => redirect('/login')}>
           Iniciar sesión
         </div>
-        <ShoppingCartOutlined />
+        <ShoppingCartOutlined onClick={() => redirect('/cart')} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
