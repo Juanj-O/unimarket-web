@@ -1,0 +1,14 @@
+table {
+  border: 1px solid #ccc;
+  border-radius: 10px !important;
+}
+th {
+  background-color: var(--color-primary-light) !important;
+  color: var(--color-paragraph) !important;
+}
+.icons {
+  display: flex;
+  gap: 5px;
+  color: var(--color-primary-light);
+  cursor: pointer;
+}

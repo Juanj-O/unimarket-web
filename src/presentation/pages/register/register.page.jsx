@@ -1,9 +1,9 @@
-import "./scss/_login.scss";
+import "./scss/_register.scss";
 
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
 
-const LoginPage = () => {
+const Register = () => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
@@ -28,7 +28,7 @@ const LoginPage = () => {
       <div className="login-right-side">
         <div className="form-side">
           <div className="title">
-            <h2>Iniciar sesión en Unimarket</h2>
+            <h2>Registrarse en Unimarket</h2>
           </div>
 
           <div className="form-container">
@@ -39,15 +39,51 @@ const LoginPage = () => {
               onFinish={onFinish}
             >
               <Form.Item
-                name="username"
-                rules={[{ required: true, message: "Escribe tu usuario!" }]}
+                name="name"
+                rules={[{ required: true, message: "Escribe tu nombre completo!" }]}
               >
                 <Input
                   prefix={<UserOutlined className="site-form-item-icon" />}
-                  placeholder="Usuario"
+                  placeholder="Nombre Completo"
                 />
               </Form.Item>
               <Form.Item
+                name="email"
+                rules={[{ required: true, message: "Escribe tu contraseña!" }]}
+              >
+                <Input
+                  prefix={<UserOutlined className="site-form-item-icon" />}
+                  placeholder="Correo"
+                />
+              </Form.Item>
+							<Form.Item
+                name="cedula"
+                rules={[{ required: true, message: "Escribe tu contraseña!" }]}
+              >
+                <Input
+                  prefix={<UserOutlined className="site-form-item-icon" />}
+                  placeholder="Cedula"
+                />
+              </Form.Item>
+							<Form.Item
+                name="phone"
+                rules={[{ required: true, message: "Escribe tu contraseña!" }]}
+              >
+                <Input
+                  prefix={<UserOutlined className="site-form-item-icon" />}
+                  placeholder="Numero de telefono"
+                />
+              </Form.Item>
+							<Form.Item
+                name="address"
+                rules={[{ required: true, message: "Escribe tu contraseña!" }]}
+              >
+                <Input
+                  prefix={<UserOutlined className="site-form-item-icon" />}
+                  placeholder="Direccion"
+                />
+              </Form.Item>
+							<Form.Item
                 name="password"
                 rules={[{ required: true, message: "Escribe tu contraseña!" }]}
               >
@@ -58,22 +94,13 @@ const LoginPage = () => {
                 />
               </Form.Item>
               <Form.Item>
-                <a className="login-form-forgot" href="">
-                  Olvide mi contraseña
-                </a>
-              </Form.Item>
-
-              <Form.Item>
                 <Button
                   type="primary"
                   htmlType="submit"
                   className="login-form-button"
                 >
-                  Iniciar sesión
+                  Registrarse
                 </Button>
-                <div>
-                  ¿ No tienes cuenta ? -<a href=""> Registrarse ahora!</a>
-                </div>
               </Form.Item>
             </Form>
           </div>
@@ -83,4 +110,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Register;
