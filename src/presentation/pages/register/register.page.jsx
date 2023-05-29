@@ -2,10 +2,28 @@ import "./scss/_register.scss";
 
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  const navigate = useNavigate()
+
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+		axios.post('http://localhost:8081/api/usuario/registrar-usuario', {
+			cedula: values.cedula,
+			nombreCompleto: values.nombreCompleto,
+			telefono: values.telefono,
+			direccion: values.direccion,
+			email: values.email,
+			contrasena: values.contrasena
+		})
+		.then(function (response) {
+			console.log(response);
+			navigate('/login', { replace: true })
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
   };
   return (
     <div className="login-container">
@@ -39,7 +57,7 @@ const Register = () => {
               onFinish={onFinish}
             >
               <Form.Item
-                name="name"
+                name="nombreCompleto"
                 rules={[{ required: true, message: "Escribe tu nombre completo!" }]}
               >
                 <Input
@@ -66,7 +84,7 @@ const Register = () => {
                 />
               </Form.Item>
 							<Form.Item
-                name="phone"
+                name="telefono"
                 rules={[{ required: true, message: "Escribe tu contraseña!" }]}
               >
                 <Input
@@ -75,7 +93,7 @@ const Register = () => {
                 />
               </Form.Item>
 							<Form.Item
-                name="address"
+                name="direccion"
                 rules={[{ required: true, message: "Escribe tu contraseña!" }]}
               >
                 <Input
@@ -84,7 +102,7 @@ const Register = () => {
                 />
               </Form.Item>
 							<Form.Item
-                name="password"
+                name="contrasena"
                 rules={[{ required: true, message: "Escribe tu contraseña!" }]}
               >
                 <Input

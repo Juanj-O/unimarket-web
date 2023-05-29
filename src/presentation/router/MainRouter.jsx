@@ -9,6 +9,7 @@ const SLEEP = 1
 const LoginPage = lazyMinLoadTime(() => import('../pages/login/login.page'), SLEEP)
 const Register = lazyMinLoadTime(() => import('../pages/register/register.page'), SLEEP)
 const Moderator = lazyMinLoadTime(() => import('../pages/moderator/moderator.page'), SLEEP)
+const PostProduct = lazyMinLoadTime(() => import('../pages/postProduct/post-product.page'), SLEEP)
 
 const DashboardPage = lazyMinLoadTime(() => import('../pages/dashboard/dashboard.page'), SLEEP)
 
@@ -24,6 +25,7 @@ const MainRouter = () => {
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<Register />} />
           <Route path="moderator" element={<Moderator />} />
+          <Route path="post-product" element={<PostProduct />} />
           <Route element={<AuthGuard />}>
             <Route path="market" element={<DashboardPage />} />
           </Route>
