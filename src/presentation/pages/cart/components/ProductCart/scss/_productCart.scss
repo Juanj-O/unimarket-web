@@ -41,6 +41,27 @@
       }
     }
 
+    & div {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      & button {
+        height: 25px;
+        width: 40%;
+        border-radius: 20px;
+        border: 0;
+        background-color: var(--color-primary-light);
+        color: var(--color-paragraph);
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
     .container-buttons {
       width: 100%;
       display: flex;

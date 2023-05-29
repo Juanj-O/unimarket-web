@@ -9,18 +9,22 @@ const Cart = () => {
 
   useEffect(() => {
     let cartAux = JSON.parse(localStorage.getItem('carrito'))
+    console.log(cartAux)
     if (cartAux != null) {
-      let countProducts = 0
-      let totalAux = 0
       setCart(cartAux)
-      cart.map((product) => {
-        countProducts += product.count
-        totalAux += product.count * product.precio
-      })
-      setCountProductsCart(countProducts)
-      setTotal(totalAux)
     }
   }, [])
+
+  useEffect(() => {
+    let countProducts = 0
+    let totalAux = 0
+    cart.map((product) => {
+      countProducts += product.count
+      totalAux += product.count * product.precio
+    })
+    setCountProductsCart(countProducts)
+    setTotal(totalAux)
+  }, [cart])
 
   return (
     <Layout>
@@ -29,7 +33,7 @@ const Cart = () => {
           <h1>Mi Pedido</h1>
           <div className="container-products">
             {cart.map((product, index) => (
-              <ProductCart key={index} product={product} />
+              <ProductCart key={index} product={product} setCart={setCart} />
             ))}
           </div>
         </div>
