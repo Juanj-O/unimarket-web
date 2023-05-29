@@ -1,6 +1,6 @@
 import { BsFillTrashFill } from 'react-icons/bs'
 import './scss/_productCart.scss'
-const ProductCart = () => {
+const ProductCart = ({ product }) => {
   return (
     <div className="container-productCart">
       <div className="container-image">
@@ -10,14 +10,14 @@ const ProductCart = () => {
         />
       </div>
       <div className="container-info">
-        <h2>Computador Gamer</h2>
+        <h2>{product && product.nombre}</h2>
         <h3>
-          Precio : <p> $3.000.000</p>
+          Precio : <p> ${product && product.precio}</p>
         </h3>
         <div className="container-buttons">
           <div className="buttons-quantity">
             <button>-</button>
-            <input defaultValue={3} />
+            <input defaultValue={product && product.count} />
             <button>+</button>
           </div>
           <BsFillTrashFill />

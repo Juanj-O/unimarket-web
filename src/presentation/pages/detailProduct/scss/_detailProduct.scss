@@ -83,7 +83,7 @@
           transition: 0.5s;
 
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
           }
         }
 
@@ -93,6 +93,22 @@
           border: 0.5px solid var(--color-primary-light);
           height: 50px;
           text-align: center;
+        }
+      }
+      .button-add {
+        width: 75%;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 20px;
+        border: 0;
+        background-color: var(--color-primary-light);
+        color: var(--color-paragraph);
+        box-shadow: var(--box-shadow-medium);
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          transform: scale(1.1);
         }
       }
     }
