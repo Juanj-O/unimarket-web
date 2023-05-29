@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const CategoriesPage = () => {
   const navigate = useNavigate();
   const handleCategories = (event) => {
-    console.log(event.target.getAttribute("value"));
+    navigate(`/market/${event.target.getAttribute("value")}`);
   };
   return (
     <div className="categories-container">

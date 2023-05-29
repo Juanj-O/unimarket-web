@@ -1,7 +1,6 @@
-import { Button } from "antd";
+import { Button, Input } from "antd";
 import React from "react";
 import "./scss/_comments.scss";
-import { Input } from "antd";
 
 const Comments = () => {
   return (
