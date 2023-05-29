@@ -91,4 +91,28 @@
       }
     }
   }
+
+  .content-favorites {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & h1 {
+      color: var(--color-primary-light);
+      font-size: 23px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    & .container-products {
+      width: 55%;
+      padding: 15px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
 }

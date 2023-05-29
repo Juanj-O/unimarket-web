@@ -24,14 +24,14 @@
   cursor: pointer;
   &:hover {
     opacity: 0.85;
-    @if $backgroundColor == var(--color-primary-dark-light) {
+    @if $backgroundColor == var(--color-primary-dark) {
       opacity: 0.9;
     }
   }
   &[disabled] {
     cursor: not-allowed;
     opacity: 0.85;
-    @if $backgroundColor == var(--color-primary-dark-light) {
+    @if $backgroundColor == var(--color-primary-dark) {
       opacity: 0.9;
     }
   }
@@ -39,7 +39,7 @@
     & .ant-spin-dot-item {
       background-color: var(--color-primary-dark-dark);
       @if $backgroundColor == var(--color-primary-dark-dark) {
-        background-color: var(--color-primary-dark-light);
+        background-color: var(--color-primary-dark);
       }
     }
   }
@@ -53,16 +53,16 @@
 }
 
 @mixin hoverAndFocus() {
-  caret-color: var(--color-primary-dark-light);
+  caret-color: var(--color-primary-dark);
   &:hover {
-    border-color: var(--color-primary-dark-light);
+    border-color: var(--color-primary-dark);
   }
   &:focus,
   &-focused {
-    box-shadow: 0 0 0 2px rgba(62, 232, 93, 0.33);
-    border: 1px solid var(--color-primary-dark-light);
+    box-shadow: var(--box-shadow-light);
+    border: 1px solid var(--color-primary-dark);
     &:hover {
-      border-color: var(--color-primary-dark-light);
+      border-color: var(--color-primary-dark);
     }
   }
 }
