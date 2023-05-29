@@ -29,7 +29,7 @@ const Header = () => {
 
       <div className="header-menu__right">
         <HeartOutlined onClick={() => redirect("/favorites")} />
-        <div className="options" onClick={() => redirect("/login")}>
+        <div className="options" onClick={() => redirect("/register")}>
           Registrarse
         </div>
         <div className="options" onClick={() => redirect("/login")}>

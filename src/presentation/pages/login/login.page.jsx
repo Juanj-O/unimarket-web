@@ -27,7 +27,6 @@ const LoginPage = () => {
 			localStorage.setItem('token', response.data.token);
 			if (values.type==="moderador") {
 			navigate('/moderator', { replace: true })
-				
 			}else{
 			navigate('/', { replace: true })
 			}
@@ -46,6 +45,7 @@ const LoginPage = () => {
               className="logo"
               src="/assets/unimarket-logo.png"
               alt="imagen"
+							onClick={ () => navigate('/')}
             />
 
             <h1>Vende o compra.</h1>
@@ -75,7 +75,7 @@ const LoginPage = () => {
                 <Select
                   options={[
 										{key:1, value: 'moderador', label: 'Moderador' },
-										{key:2, value: 'moderador', label: 'Usuario' }
+										{key:2, value: 'usuario', label: 'Usuario' }
 		
 									]}
                 />

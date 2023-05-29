@@ -34,6 +34,7 @@ const Register = () => {
               className="logo"
               src="/assets/unimarket-logo.png"
               alt="imagen"
+							onClick={ () => navigate('/')}
             />
 
             <h1>Vende o compra.</h1>

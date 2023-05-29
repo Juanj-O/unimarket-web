@@ -1,6 +1,6 @@
 import './scss/_product-detail.scss'
 
-const ProductDetail = () => {
+const ProductDetail = ({product}) => {
   return (
     <div className="container-product">
       <div className="container-image">
@@ -10,13 +10,10 @@ const ProductDetail = () => {
         />
       </div>
       <div className="container-info">
-        <h2>Computador Gamer</h2>
+        <h2> {product && product.nombre}</h2>
         <h3>Descripcion:</h3>
         <p>
-          {' '}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime suscipit voluptatem in
-          modi incidunt asperiores, vel error. Nihil modi iusto alias molestias mollitia, veniam
-          provident sit pariatur porro facilis fuga?
+          {product && product.descripcion}
         </p>
       </div>
     </div>
